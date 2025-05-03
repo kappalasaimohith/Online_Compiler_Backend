@@ -6,9 +6,7 @@ import { routes } from './routes.js';
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors(
-  origin: 'https://online-compiler-frontend-phi.vercel.app',
-));
+app.use(cors());
 app.use(bodyParser.json());
 
 app.use('/api', routes);
